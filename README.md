@@ -1,1 +1,7 @@
-# Sign-Language-using-CNN-Deep-Learning-Project-
+Sign-Language-using-CNN-Deep-Learning-Project-
+This project presents a real-time system for converting American Sign Language (ASL) fingerspelling gestures into both text and speech, using Convolutional Neural Networks (CNN) and computer vision techniques. Designed to aid communication for deaf and mute individuals, the system detects hand gestures via a webcam, processes them using MediaPipe for landmark detection, and classifies them into alphabets using a CNN-based model trained on landmark-based images per letter.
+
+To handle variations in background and lighting, the system extracts 3D hand landmark points from MediaPipe and overlays them onto a clean white canvas, ensuring robustness. To overcome classification challenges across 26 ASL letters, the gestures were grouped into 8 broader categories, followed by intra-class differentiation using geometric features. This two-stage approach significantly improved accuracy—achieving 97%+ accuracy under varied conditions and up to 99% in clean environments.
+
+Once the gesture is recognized, the system displays the corresponding text and uses the pyttsx3 library for text-to-speech synthesis, enabling a complete sign-to-voice pipeline. Built with Python, OpenCV, TensorFlow/Keras, and MediaPipe, the project runs on standard hardware with a webcam and provides an accessible, cost-effective solution for real-time gesture-based communication.
+
